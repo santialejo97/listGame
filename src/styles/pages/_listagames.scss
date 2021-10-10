@@ -1,0 +1,77 @@
+@import '/src/styles/globales/mixins';
+
+
+.list__container{
+    color: $negro;
+    margin: 0 $separacion*4;
+    
+    .list__grid{
+
+        @include grid(5,$separacion);
+    }
+
+    .list--juegos{
+        
+        margin: $separacion ;
+        box-shadow: 2px 2px 2px $gris;
+        border-radius: 1rem;
+        padding: $separacion 0;
+        border: .1px solid $gris;
+
+        .juego__card--btn{
+            @include btn($naranja);
+            
+        }
+
+    }
+
+    .list__juegos--card{
+        text-align: center;
+        width: 25rem;
+        max-height: 100%;
+
+        .juego__card--img{
+            display: flex;
+            width: 20rem;
+            height: 10rem;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            
+
+            img{
+                max-width: 20rem;
+                max-height: 10rem;
+            }
+        }
+        
+
+        p{
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-top: 4rem;
+        }
+
+        .juego__card--btn{
+            margin-top: 2rem;
+        }
+    }
+
+}
+
+.list__container{
+    
+    .centrado{
+        text-align: center;
+        color: $rojo;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+.list__espacio{
+    width: 100%;
+    height: 10rem;
+    border-right: .5rem solid $rojo;
+    margin-bottom: $separacion*2;
+}

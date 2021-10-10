@@ -1,0 +1,45 @@
+<app-header></app-header>
+<div class="list__espacio"></div>
+<section class="game__container">
+    <div class="game__container--image">
+        <img src="{{info.thumb}}" alt="{{info.title}}">
+    </div>
+    <div class="game__container--info">
+        <h1>{{info.title}}</h1>
+        <div class="container__info--principal flex">
+            <div class="principal__price flex">
+                <h3>Precio:</h3>
+                <p>{{cheapestPriceEver.price |currency:'':'symbol-narrow':'1.0-4'}}</p>
+            </div>
+            <div class="principal__date flex">
+                <h3>Fecha:</h3>
+                <p>{{fecha |date:'shortDate'}}</p>
+            </div>
+        </div>
+        <div class="container__info--deals " >
+            <h2>Ofertas</h2>
+            <div class="deals__tablet">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Precio</th>
+                            <th>Precio al por menor</th>
+                            <th>Ahorro</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let oferta of deals">
+                        <tr>
+                            <td>{{oferta.price |currency:'':'symbol-narrow':'1.0-4'}}</td>
+                            <td>{{oferta.retailPrice |currency:'':'symbol-narrow':'1.0-4'}}</td>
+                            <td>{{oferta.savings |currency:'':'symbol-narrow':'1.0-4'}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <button type="button" class="container__info--btn" routerLink= "/app/listGames">volver</button>
+    </div>
+    
+    
+
+</section>

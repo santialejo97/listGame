@@ -1,0 +1,19 @@
+@import '../../../../styles/globales/mixins';
+@import '../../../../styles/globales/variables';
+
+h1{
+    margin-bottom: 4rem;
+}
+
+
+
+.list__grid{
+
+    @include tablet{
+        @include grid(3,$separacion);
+    }
+
+    @include telefono{
+        @include grid(1,$separacion);
+    }
+ }

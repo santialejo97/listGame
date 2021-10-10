@@ -1,0 +1,18 @@
+@import '/src/styles/globales/mixins';
+
+.header__compras--text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 2rem;
+}
+
+.scroll{
+    @include telefono{
+        height: 140px;
+    }
+    
+    @include tablet{
+        height: 100px;
+    }
+}

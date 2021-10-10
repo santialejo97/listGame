@@ -1,0 +1,35 @@
+
+<app-header (list)='buscar($event)'
+            (errorEnvio) = 'campoValidar($event)'
+            (terminoEnvio)='campoBuscado($event)'>
+</app-header >
+
+<div class="list__espacio"></div>
+
+<div class="list__container">
+    <h1>Todos los Juegos</h1>
+
+    <div *ngIf='inicio' class="centrado">
+        <h2>{{'Ingresa el nombre del juego ' |titlecase}}</h2>
+    </div>
+
+    <div class="list__grid"  *ngIf="errorLista == false; else juegoNoValido">
+        
+        <div class="list--juegos" *ngFor="let game of listGame">
+            <div class="list__juegos--card">
+                <div class="juego__card--img">
+                   <img src="{{game.thumb}}" alt="{{game.internalName }}">
+                </div>
+                <p>{{game.external|titlecase}}</p>
+                <button class="juego__card--btn" type="submit" [routerLink]="['/app/games',game.gameID]">Ver detalles</button>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #juegoNoValido >
+        <div class="centrado">
+            <h2>{{termino}}</h2>
+        </div>
+    </ng-template>
+    
+</div>

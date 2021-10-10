@@ -1,0 +1,74 @@
+.game__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: $separacion*4 auto 0;
+    gap: $separacion *7;
+
+    @include telefono{
+        display: block;
+    }
+
+    @include tablet{
+        display: block;
+    }
+    
+
+    .game__container--info{
+        border: .1px solid $gris;
+        box-shadow: 2px 2px 2px $gris;
+        border-radius: 10px;
+        padding: $separacion * 2;
+        margin-top: $separacion * 2;
+
+        .flex{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: $separacion;
+        }
+
+        @include tablet{
+           margin: $separacion;
+           padding: $separacion;
+        }
+
+        @include telefono{
+            margin: $separacion;
+            padding: $separacion;
+        }
+    }
+
+    .game__container--image{
+        
+        img{
+            width: 30rem;
+            height: 40rem;
+            
+        }
+    }
+
+}
+
+.container__info--deals{
+    .deals__tablet{
+        table{
+           width: 100%;
+           th{
+               font-size: 18px;
+           }
+
+           td{
+               font-size: 16px;
+               color: $negro;
+           }
+            
+        }
+    }
+}
+
+.container__info--btn{
+    @include btn($naranja);
+    margin-top: $separacion;
+}

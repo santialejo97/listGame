@@ -1,0 +1,28 @@
+ @import '/src/styles/header/header';
+ @import '/src/styles/globales/_variables';
+ @import '/src/styles/pages/listagames';
+ @import '/src/styles/pages/game';
+ @import '/src/styles/globales/mixins';
+ 
+ html{
+     font-size: 62.5%;
+     box-sizing: border-box;
+     width: 100%;
+     height: 100%;
+ }
+
+ *,*:before,*:after{
+    box-sizing: inherit;
+ }
+
+ body{
+     font-size: 1.6rem;
+     margin: 0;
+     color: $rojo;
+     font-family: 'Open Sans', sans-serif;
+     font-weight: 300;
+ }
+
+ h4,h2,h3,h1{
+     margin: 0;
+ }

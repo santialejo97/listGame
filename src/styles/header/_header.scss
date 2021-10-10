@@ -1,0 +1,119 @@
+@import '/src/styles/globales/_variables';
+@import '/src/styles/globales/mixins';
+
+.header{
+    display: flex;
+    width: 100%;
+    box-shadow: 15px 2px 6px $gris;
+    padding-bottom: $separacion ;
+    padding-top: $separacion;
+    position: fixed;
+    background-color: $blanco;
+
+    .header__container{
+        position: relative;
+        width: 30rem;
+        flex: 1;
+    }
+    .header__logo{
+        position: absolute ;
+        background-color:$rojo ;
+        padding: $separacion $separacion * 4;
+        border-bottom-left-radius: 1.4rem;
+        border-bottom-right-radius: 1.4rem;
+        margin-left: $separacion* 2;
+        top: -20px;
+        img{
+            width: 100px;
+        }
+        &:hover{
+            background-color: $naranja;
+        }
+
+        @include telefono{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 200px;
+            img{
+               width: 80px;
+            }
+        }
+
+        @include tablet{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            height: 160px;
+            img{
+               width: 80px;
+            }
+        }
+    }
+
+    .header__info{
+        flex: 2;
+        display: flex;
+        align-items: center;
+
+        @include telefono{
+         flex-direction: column-reverse;
+         gap: $separacion;
+        }
+    }
+}
+
+.header__info{
+
+    .header__info--buscador{
+        flex-grow: 1;
+
+        .formulario .icono--buscador{
+            width: 40rem;
+            padding: .7rem;
+
+            @include telefono{
+                width: 30rem;
+            }
+
+            @include tablet{
+                width: 30rem;
+            }
+        }
+
+        .icono--buscador::placeholder{
+            color: $rojo;
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900;
+        }
+
+    }
+
+    .info__separador{
+        flex-grow: 2;
+        display: flex;
+        gap: $separacion * 4;
+        align-items: center;
+        margin-right: $separacion * 2;
+
+        .header__info--compras{
+            display: flex;
+            align-items: center;
+            gap:$separacion
+        }
+
+        .header__info--usuario{
+            display: flex;
+            text-align: center;
+            gap:$separacion
+        }
+    }
+}
+
+.header__espacio{
+    width: 100%;
+    height: 7rem;
+        
+}

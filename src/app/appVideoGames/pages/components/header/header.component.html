@@ -1,0 +1,45 @@
+
+    <div class="header">
+
+        <div class="header__container" >
+            <div class="header__logo" id="logo">
+                <img src="../../../assets/Logo.png" alt="Logo">
+            </div>
+        </div>
+    
+        <div class="header__info">
+            <div class="header__info--buscador">
+                <form class="formulario" autocomplete="off" (ngSubmit)='buscar()'>
+                    <input type="text" 
+                        class="icono--buscador" 
+                        placeholder="¿Que estas buscando?"
+                        name="termino"
+                        [(ngModel)]="termino">
+                </form>
+            </div>
+    
+            <div class="info__separador">
+    
+                <div class="header__info--compras">
+                    <h4 class="header__compras--text">{{'resumen ' |titlecase}} <span>de compras</span>  </h4>
+                    <div class="header__compras--icono">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+        
+                <div class="header__info--usuario">
+                    <div class="header_-usuario__icono">
+                        <i class="far fa-user-circle"></i>
+                    </div>
+                    <h4 class="header_-usuario__text">Santiago 
+                        <span><i class="fas fa-angle-down"></i></span>
+                    </h4>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+
+
+<div class="header__espacio"></div>

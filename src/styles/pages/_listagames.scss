@@ -7,7 +7,7 @@
     
     .list__grid{
 
-        @include grid(5,$separacion);
+        @include grid(4,$separacion);
     }
 
     .list--juegos{

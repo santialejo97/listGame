@@ -32,22 +32,16 @@ export class HeaderComponent  {
 
   }
 
-  constructor(private gameServices:GamesService, private route: Router) {
-    this.listGames = JSON.parse(localStorage.getItem('listGames')!) || [];
-    this.list.emit(this.listGames);
-   }
+  constructor(private gameServices:GamesService, private route: Router) {}
 
   buscar(){
-    console.log(this.termino)
     this.gameServices.listaGames(this.termino).subscribe((resp) => {
       
       if(!resp.length){
         this.validarCampo()
         return
       }
-      
       this.listGames = resp;
-      localStorage.setItem('listGames', JSON.stringify(this.listGames) );
       this.list.emit(this.listGames);
       this.error= false;
       this.errorEnvio.emit(this.error);

@@ -9,10 +9,10 @@
 
 .scroll{
     @include telefono{
-        height: 140px;
+        height: 160px;
     }
     
     @include tablet{
-        height: 100px;
+        height: 120px;
     }
 }

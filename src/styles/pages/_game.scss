@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: $separacion*4 auto 0;
+    margin: $separacion*4 auto $separacion*4;
     gap: $separacion *7;
 
     @include telefono{
@@ -24,6 +24,7 @@
 
         .flex{
             display: flex;
+            justify-content: center;
             align-items: center;
             gap: 30px;
             margin: $separacion;

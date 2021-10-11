@@ -2,6 +2,7 @@ import { Component} from '@angular/core';
 
 import { GamesService } from '../../../services/games.service';
 import { game } from '../../../interfaces/videoGames-interfaces';
+import { flatten } from '@angular/compiler';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class ListgamesComponent  {
   errorLista!:boolean ;
   termino: string= '';
   inicio:boolean = true;
-  constructor() { }
+  constructor() {}
 
 
   buscar(list:game[]){

@@ -23,6 +23,9 @@
         border-bottom-right-radius: 1.4rem;
         margin-left: $separacion* 2;
         top: -20px;
+        @include telefono{
+            left: -40px;
+        }
         img{
             width: 100px;
         }
